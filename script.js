@@ -1,8 +1,5 @@
-const toggle = document.getElementById('dark-mode-toggle');
-
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+// Yükleme Ekranı
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector(".loader-wrapper");
+  setTimeout(() => loader.style.display = "none", 2000);
 });
-
-/* Gece Modu Stili */
-document.body.classList.add('dark-mode');
