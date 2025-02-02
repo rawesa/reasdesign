@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reas Design</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Reas Design - Anasayfa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 
     <header>
-        <div class="logo">Reas Design</div>
         <nav>
-            <ul class="menu">
+            <div class="logo">Reas Design</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
                 <li class="dropdown">
-                    <a href="#">Kategoriler ▼</a>
+                    <a href="products.html">Ürünler</a>
                     <ul class="dropdown-menu">
-                        <li><a href="about.html">Hakkımızda</a></li>
-                        <li><a href="products.html">Ürünler</a></li>
-                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="products.html#web">Web Tasarım</a></li>
+                        <li><a href="products.html#logo">Logo Tasarım</a></li>
+                        <li><a href="products.html#uiux">UI/UX Tasarım</a></li>
                     </ul>
                 </li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Modern ve Şık Tasarımlar</h1>
-        <p>Minimalist ve yenilikçi tasarımlar ile markanızı güçlendirin.</p>
-        <a href="products.html" class="btn">Ürünleri İncele</a>
+        <h1>Reas Design</h1>
+        <p>Profesyonel Web ve Grafik Tasarım Hizmetleri</p>
+        <a href="products.html" class="btn">Hizmetlerimizi İncele</a>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Reas Design - Tüm Hakları Saklıdır</p>
-    </footer>
 
 </body>
 </html>
