@@ -1,24 +1,28 @@
-// Menü Geçişi
-document.addEventListener("DOMContentLoaded", function() {
-  const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.querySelector("nav ul");
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
 
-  menuToggle.addEventListener("click", function() {
-    nav.classList.toggle("active");
-  });
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+    });
+
+    // Açılır Menü Mobil
+    const navLinks = document.querySelector(".nav-links");
+    const toggleMenu = document.createElement("button");
+    toggleMenu.innerText = "☰";
+    toggleMenu.classList.add("menu-toggle");
+    document.querySelector("nav").appendChild(toggleMenu);
+
+    toggleMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 });
 
-// Scroll Animasyonları
-window.addEventListener("scroll", function() {
-  let reveals = document.querySelectorAll(".reveal");
+// Açılır Not
+function openNote() {
+    document.getElementById("note").classList.add("visible");
+}
 
-  for (let i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let revealTop = reveals[i].getBoundingClientRect().top;
-    let revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("active");
-    }
-  }
-});
+function closeNote() {
+    document.getElementById("note").classList.remove("visible");
+}
