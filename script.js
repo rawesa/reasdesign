@@ -1,28 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
-
-    darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-    });
-
-    // Açılır Menü Mobil
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
-    const toggleMenu = document.createElement("button");
-    toggleMenu.innerText = "☰";
-    toggleMenu.classList.add("menu-toggle");
-    document.querySelector("nav").appendChild(toggleMenu);
+    const navbar = document.querySelector("nav");
 
-    toggleMenu.addEventListener("click", () => {
+    // Menü Aç/Kapat Butonu (Mobil)
+    menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
     });
+
+    // Navbar Scroll Efekti
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = "#600000";
+            navbar.style.transition = "0.3s";
+        } else {
+            navbar.style.background = "#8B0000";
+        }
+    });
 });
-
-// Açılır Not
-function openNote() {
-    document.getElementById("note").classList.add("visible");
-}
-
-function closeNote() {
-    document.getElementById("note").classList.remove("visible");
-}
