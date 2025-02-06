@@ -1,20 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
-    const navbar = document.querySelector("nav");
-
-    // Menü Aç/Kapat Butonu (Mobil)
-    menuToggle.addEventListener("click", () => {
+    
+    menuToggle.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
 
-    // Navbar Scroll Efekti
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector("nav");
         if (window.scrollY > 50) {
-            navbar.style.background = "#600000";
-            navbar.style.transition = "0.3s";
+            navbar.style.background = "#800020";
         } else {
-            navbar.style.background = "#8B0000";
+            navbar.style.background = "rgba(128, 0, 32, 0.9)";
         }
     });
 });
