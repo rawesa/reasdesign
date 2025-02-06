@@ -1,151 +1,102 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Genel Ayarlar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     color: #fff;
+    text-align: center;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #8B0000;
-    padding: 15px 50px;
+    background: rgba(128, 0, 32, 0.9);
+    padding: 15px 30px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
 }
 
-.nav-links li a {
-    text-decoration: none;
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
     color: white;
-    font-weight: bold;
-    padding: 8px 15px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-    background: white;
-    color: #8B0000;
-    border-radius: 5px;
+.nav-links a:hover {
+    color: #ff4444;
 }
 
-/* HERO */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 .hero {
+    height: 100vh;
+    background: linear-gradient(to right, #800020, #1a1a1a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     text-align: center;
-    padding: 150px 20px;
-    background: linear-gradient(to bottom, #8B0000, #1a1a1a);
 }
 
 .hero h1 {
-    font-size: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.hero .btn {
-    background: white;
-    color: #8B0000;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.hero .btn:hover {
-    background: #cfcfcf;
-}
-
-/* ÜRÜNLER */
-.products {
-    padding: 80px 50px;
-    text-align: center;
-}
-
-.products h1 {
-    font-size: 36px;
-    font-weight: bold;
+.hero p {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.product-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.product-card {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 280px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(255, 0, 0, 0.3);
-}
-
-.product-card h3 {
-    margin-top: 0;
-}
-
-.product-card .btn {
-    background: #8B0000;
+.btn {
+    background: #ff4444;
     color: white;
-    padding: 12px 18px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.product-card .btn:hover {
-    background: white;
-    color: #8B0000;
+.btn:hover {
+    background: #cc0000;
 }
 
-/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
-    margin-top: 50px;
-}
-
-footer p {
-    margin: 0;
+    background: #111;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
 }
